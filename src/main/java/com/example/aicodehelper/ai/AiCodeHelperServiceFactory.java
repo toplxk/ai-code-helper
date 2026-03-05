@@ -1,5 +1,6 @@
 package com.example.aicodehelper.ai;
 
+import com.example.aicodehelper.ai.tools.InterviewQuestionTool;
 import dev.langchain4j.memory.ChatMemory;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.model.chat.ChatModel;
@@ -27,6 +28,7 @@ public class AiCodeHelperServiceFactory {
         AiCodeHelperService aiCodeHelperService = AiServices.builder(AiCodeHelperService.class)
                 .chatModel(qwenChatModel)
                 .chatMemory(chatMemory)     //会话记忆
+                .tools(new InterviewQuestionTool())   //工具调用
                 .build();
         /**
          调用 AiServices.create

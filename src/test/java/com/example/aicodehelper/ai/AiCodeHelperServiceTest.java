@@ -29,4 +29,10 @@ class AiCodeHelperServiceTest {
         AiCodeHelperService.Report report = aiCodeHelperService.chatForRepot("你好，我是程序员leeyker，学习编程两年半，请帮成制定学习报告");
         System.out.println(report);
     }
+
+    @Test
+    void charWithTools() {
+        String message = aiCodeHelperService.chat("有哪些常见的计算机网络面试题");
+        System.out.println(message);
+    }
 }
