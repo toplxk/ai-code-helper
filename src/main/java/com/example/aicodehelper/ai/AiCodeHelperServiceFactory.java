@@ -22,6 +22,10 @@ public class AiCodeHelperServiceFactory {
 
     @Bean
     public AiCodeHelperService aiCodeHelperService() {
+//        ChatLanguageModel model = OpenAiChatModel.builder()
+//                .apiKey(System.getenv("OPENAI_API_KEY"))
+//                .modelName(GPT_4_O_MINI)
+//                .build();
         //会话记忆
         ChatMemory chatMemory = MessageWindowChatMemory.withMaxMessages(8);
         //构造Ai Service
